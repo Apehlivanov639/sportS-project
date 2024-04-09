@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="main">
+		<div class="signup">
+			<form class="login" #form="ngForm">
+				<label>login</label>
+				<input type="email" name="email" placeholder="email" id="email"
+					ngModel #inputEmail="ngModel" required>
+
+				<ng-container>
+					<p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+				</ng-container>
+
+				<input type="password" name="password" placeholder="Password" id="password"
+					ngModel
+					#inputPassword="ngModel" required>
+				<button>
+					Login
+				</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

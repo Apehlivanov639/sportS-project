@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './core/home/home.component';
+import { UserModule } from './user/user.module';
+import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,11 @@ import { HomeComponent } from './core/home/home.component';
     MainComponent,
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
     SharedModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
