@@ -24,6 +24,12 @@
       "dom"
     ]
   },
+
+  "include": [
+    "src/**/*.ts",
+    "src/app/shared/utils/match-passwords-validator.ts" 
+  ],
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
