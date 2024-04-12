@@ -1,0 +1,11 @@
+
+.thank-you-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+  }
+  
