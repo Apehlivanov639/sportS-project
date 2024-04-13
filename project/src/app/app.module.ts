@@ -13,6 +13,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { CartComponent } from './cart/cart.component';
 import { ThankYouComponent } from './cart/thank-you/thank-you.component';
 import { RouterModule } from '@angular/router';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     ProductsListComponent,
     CartComponent,
     ThankYouComponent,
+    AuthenticateComponent,
   ],
   imports: [
     CoreModule,

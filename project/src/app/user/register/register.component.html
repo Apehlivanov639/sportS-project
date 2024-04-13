@@ -2,36 +2,38 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="main">
         <div class="signup">
             <form class="register" [formGroup]="form" (ngSubmit)="register()">
-                <label>Sign up</label>
-                <input type="txt" name="username" placeholder="username" required="" formControlName="username">
-                <ng-container *ngIf="form.get('username')?.touched">
-                    <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
-                    <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">username must be at least 5
-                        characters!</p>
+                <fieldset>
+                    <label>Sign up</label>
+                    <input type="txt" name="username" placeholder="username" required="" formControlName="username">
+                    <ng-container *ngIf="form.get('username')?.touched">
+                        <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
+                        <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">username must be at least 5
+                            characters!</p>
 
-                </ng-container>
-                <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+                    </ng-container>
+                    <input type="email" name="email" placeholder="Email" required="" formControlName="email">
 
-                <ng-container formGroupName="passGroup">
-                    <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
-                    <input type="password" name="pswd" placeholder="rePassword" required=""
-                        formControlName="rePassword">
-                </ng-container>
-                <ng-container *ngIf="passGroup?.get('rePassword')?.touched">
-                    <p class="error" *ngIf="passGroup?.errors?.['matchPasswordsValidator'] || 
+                    <ng-container formGroupName="passGroup">
+                        <input type="password" name="pswd" placeholder="Password" required=""
+                            formControlName="password">
+                        <input type="password" name="pswd" placeholder="rePassword" required=""
+                            formControlName="rePassword">
+                    </ng-container>
+                    <ng-container *ngIf="passGroup?.get('rePassword')?.touched">
+                        <p class="error" *ngIf="passGroup?.errors?.['matchPasswordsValidator'] || 
                       passGroup?.get('rePassword')?.errors?.['required']">
-                        Repeat Password does not match password!
-                    </p>
-                </ng-container>
+                            Repeat Password does not match password!
+                        </p>
+                    </ng-container>
 
-                <button [disabled]="form.invalid" >Sign up</button>
+                    <button [disabled]="!form.valid">Sign up</button>
+                </fieldset>
             </form>
         </div>
 

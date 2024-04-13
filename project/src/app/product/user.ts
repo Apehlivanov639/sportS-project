@@ -1,7 +1,7 @@
 
 
 export interface User {
-  themes: string[];
+  products: string[];
   _id: string;
   email: string;
   username: string;
@@ -9,7 +9,7 @@ export interface User {
 }
 
 export interface UserForAuth {
-  firstName: string;
+  username: string;
   email: string;
   password: string;
   id: string;
@@ -18,5 +18,4 @@ export interface UserForAuth {
 export interface ProfileDetails {
   username: string;
   email: string;
-  tel: string;
 }

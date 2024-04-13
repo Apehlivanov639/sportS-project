@@ -28,7 +28,7 @@
 							password must be at least 5 characters!
 						</p>
 					</ng-container>
-				<button>
+				<button [disabled]="!form.valid">
 					Login
 				</button>
 			</form>
